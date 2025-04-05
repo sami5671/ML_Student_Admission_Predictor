@@ -19,6 +19,7 @@ app.use(express.urlencoded());
 
 // ---------------------------------------------------------------------------------------------
 app.post("/api/predict", async (req, res) => {
+  console.log(req.body);
   try {
     const response = await axios.post(
       "http://localhost:5000/predict",
