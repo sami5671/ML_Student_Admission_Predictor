@@ -73,7 +73,15 @@ function App() {
 
             {result && (
               <div className="mt-6">
-                <h2>🧠 Admission Chance: {result.admission_chance}%</h2>
+                <h1>🧠 Admission Chance: {result.admission_chance}%</h1>
+                <div>
+                  {" "}
+                  <h3>✅ Recommendations 🎯 </h3>
+                  <p className="text-red-700 font-semibold">
+                    {result.recommendations}
+                  </p>
+                </div>
+
                 <img
                   src={`http://localhost:5000${result.suggestion_graph}`}
                   alt="Improvement Chart"

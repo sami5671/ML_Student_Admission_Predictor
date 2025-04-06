@@ -24,19 +24,20 @@ def predict():
     cgpa = float(data["cgpa"])
     research = int(data["research"])
 
+    # Prepare input for model
     input_features = np.array([[gre, toefl, cgpa, research]])
     prob = model.predict_proba(input_features)[0][1] * 100
 
-    # Get coefficients
+    # Coefficients and normalization
     coefs = model.coef_[0]
     feature_names = ["GRE Score", "TOEFL Score", "CGPA", "Research"]
     user_values = [gre, toefl, cgpa, research]
+    max_values = [340, 120, 4.0, 1]  # Max values for normalization
 
-    max_values = [340, 120, 4.0, 1]  # max realistic values
     normalized = [val / max_v for val, max_v in zip(user_values, max_values)]
-
     contributions = [coef * norm for coef, norm in zip(coefs, normalized)]
 
+    # Create feature contribution graph
     plt.figure(figsize=(8, 5))
     plt.barh(feature_names, contributions, color="orange")
     plt.xlabel("Contribution Score")
@@ -46,10 +47,26 @@ def predict():
     plt.savefig(image_path)
     plt.close()
 
+    # Generate smart recommendations
+    recommendations = []
+    threshold = 0.8  # Feature score threshold
+
+    for norm, coef, name in zip(normalized, coefs, feature_names):
+        if norm < threshold and coef > 0:
+            if name == "Research":
+                recommendations.append(
+                    "Having research experience can significantly improve your chances. Try to participate in one."
+                )
+            else:
+                recommendations.append(
+                    f"Your {name} is relatively low. Improving it may increase your chances of admission."
+                )
+
     return jsonify(
         {
             "admission_chance": round(prob, 2),
             "suggestion_graph": "/static/feature_contribution_user.png",
+            "recommendations": recommendations,
         }
     )
 
