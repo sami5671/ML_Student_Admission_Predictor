@@ -1,4 +1,4 @@
-![Logo](https://github.com/sami5671/ML_Student_Admission_Predictor/blob/main/frontend/student_admission_predictor/public/logo.png)
+![Logo](https://github.com/sami5671/ML_Student_Admission_Predictor/blob/main/frontend/student_admission_predictor/public/logoo.png)
 
 # Student Admission Predictor with Smart Recommendation System
 
