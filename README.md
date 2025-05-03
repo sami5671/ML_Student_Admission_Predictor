@@ -1,23 +1,23 @@
-
 ![Logo](https://github.com/sami5671/ML_Student_Admission_Predictor/blob/main/frontend/student_admission_predictor/public/logo.png)
 
+# Student Admission Predictor with Smart Recommendation System
 
-# Student Admission Predictor with Smart Recommendation System 
+The primary objective of the Student Admission Predictor project is to predict a student’s probability of admission to a university based on key input features: GRE score, TOEFL score, CGPA, and Research experience. The model uses logistic regression, a powerful algorithm for binary classification, to provide accurate predictions of admission chances, helping students understand their likelihood of acceptance into graduate programs.
 
-The primary objective of the Student Admission Predictor project is to predict a student’s probability of admission to a university based on key input features: GRE score, TOEFL score, CGPA, and Research experience. The model uses logistic regression, a powerful algorithm for binary classification, to provide accurate predictions of admission chances, helping students understand their likelihood of acceptance into graduate programs. 
 ## System Architecture of SAPSRS
 
-![App Screenshot](https://github.com/sami5671/ML_Student_Admission_Predictor/blob/main/frontend/student_admission_predictor/public/System%20Diagram.png)
+![App Screenshot](https://github.com/sami5671/ML_Student_Admission_Predictor/blob/main/frontend/student_admission_predictor/public/system%20diagram.svg)
+
 ## Installation
 
 ### Install Student Admission Predictor with client npm
 
 ```bash
   git clone https://github.com/sami5671 ML_Student_Admission_Predictor.git
-  
+
   cd forntend
   cd student_admission_predictor
-  npm install 
+  npm install
 ```
 
 ### To Run Client Site
@@ -42,7 +42,9 @@ The primary objective of the Student Admission Predictor project is to predict a
   pip install scikit-learn
   python app.py
 ```
+
 # Features of Student Admission Predictor
+
 ## 🎯 Admission Prediction
 
 This feature uses a logistic regression model to calculate the probability of a student’s university admission. By inputting GRE score, TOEFL score, CGPA, and Research experience, students receive a clear percentage that represents their chance of getting admitted. This prediction helps users make informed decisions based on their academic profile.
@@ -62,6 +64,7 @@ Based on the input data and model analysis, the system generates personalized re
 ## Predicted Result With Suggestions
 
 ![App Screenshot](https://github.com/sami5671/ML_Student_Admission_Predictor/blob/main/frontend/student_admission_predictor/public/predicted%20result%20and%20suggestion.png)
+
 ## Tech Stack
 
 **Client:** React, TailwindCSS
@@ -73,4 +76,3 @@ Based on the input data and model analysis, the system generates personalized re
 # Author
 
 - [@sami5671](https://www.github.com/sami5671)
-
