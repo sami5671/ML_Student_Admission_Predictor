@@ -25,7 +25,7 @@ function FeatureImportance() {
           <div>
             <h3 className="text-3xl font-bold underline text-center mb-12 flex items-center">
               Feature vs Admission{" "}
-              <IoMdAnalytics className="flex items-center ml-2 mt-2 text-4xl" />
+              <IoMdAnalytics className="flex items-center ml-2 mt-2" />
             </h3>
             <div className="flex">
               {Object.entries(images.boxplots).map(([feature, path]) => (
